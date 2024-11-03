@@ -1,0 +1,107 @@
+---
+import ClipboardIcon from "@components/icons/ClipboardIcon.astro";
+import ClockIcon from "@components/icons/ClockIcon.astro";
+import MoneyIcon from "@components/icons/MoneyIcon.astro";
+import BannerSign from "@components/utils/BannerSign.astro";
+import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
+
+const cursos = [
+  {
+    curso: "Técnico Laboral en Analista de Soporte de Software",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+  {
+    curso: "Técnico Laboral en Auxiliar Contable y Financiero",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    curso: "Técnico Laboral en Asistencia de Mercadeo y Ventas",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    curso: "Técnico Laboral en Auxiliar Administrativo",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+  {
+    curso: "Técnico Laboral en Auxiliar de Talento Humano",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    curso: "Técnico Laboral en Auxiliar de Diseño Gráfico",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+  {
+    curso: "Técnico Laboral en Analista de Soporte de Software",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+  {
+    curso: "Técnico Laboral en Auxiliar Contable y Financiero",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    curso: "Técnico Laboral en Asistencia de Mercadeo y Ventas",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    curso: "Técnico Laboral en Auxiliar Administrativo",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+  {
+    curso: "Técnico Laboral en Auxiliar de Talento Humano",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    curso: "Técnico Laboral en Auxiliar de Diseño Gráfico",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+];
+---
+
+<main class="flex flex-col gap-28 mt-40">
+  <BannerSign
+    subtitle="¿Necesitas algo a corto plazo?"
+    title="Cursos Cortos"
+    color="yellow"
+  />
+
+  <div
+    class="flex flex-row justify-around gap-5 text-white text-2xl text-center text-pretty font-bold show-in"
+  >
+    <span class="flex flex-col items-center gap-8">
+      <ClockIcon width="100px" height="100px" fillColor="none" />
+      <h3 class="italic">4 Meses</h3>
+    </span>
+    <span class="flex flex-col items-center gap-8">
+      <MoneyIcon width="100px" height="100px" fillColor="none" />
+      <h3 class="italic">Pagos Flexibles cada 7 Días</h3>
+    </span>
+  </div>
+
+  <div class="grid grid-cols-[1fr_1px_1fr] items-center gap-10">
+    <div class="grid grid-cols-2 gap-10 slide-out">
+      {
+        cursos.map((curso) => (
+          <span class="flex flex-col text-pretty">
+            <h3 class="font-designer text-lg text-white">{curso.curso}</h3>
+            <h3 class="italic text-sm font-semibold text-[#fc4]">
+              {curso.resolucion}
+            </h3>
+          </span>
+        ))
+      }
+    </div>
+
+    <HorizontalDivider color="yellow" />
+
+    <img
+      class="w-full h-full object-cover aspect-[11/6] rounded-xl shadow-lg show-in"
+      src="https://www.elyonyireh.edu.co/wp-content/uploads/2024/02/IMG_95011.jpg"
+      alt=""
+    />
+  </div>
+  <h3
+    class="text-center px-5 py-4 border-4 rounded-full font-designer text-xl border-[#fc3]/80 shadow-[0px_1px_40px_#fc3] text-[#fc3] [text-shadow:0px_1px_30px_#fc3]"
+  >
+    Al Concluir, Obtendrás un Certificado que te Permitirá Trabajar
+  </h3>
+</main>

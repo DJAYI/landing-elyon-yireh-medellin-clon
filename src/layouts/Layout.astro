@@ -1,50 +1,150 @@
 ---
+import SmokeParticle from "@components/utils/SmokeParticle.astro";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-montserrat">
+    <div
+      class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_20%,#003577_100%)]"
+    >
+    </div>
+    <SmokeParticle />
+    <slot />
+  </body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    @font-face {
+      font-family: "Montserrat";
+      src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Designer";
+      src: url("fonts/Designer.otf") format("opentype");
+    }
+  }
+
+  .show-in {
+    view-timeline-name: --element;
+    view-timeline-axis: block;
+
+    animation-timeline: --element;
+    animation-name: show-in;
+
+    animation-range: entry 20% cover 40%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes show-in {
+    from {
+      opacity: 0;
+      transform: translatey(80px);
+    }
+    to {
+      opacity: 1;
+      transform: translatey(0);
+    }
+  }
+
+  .slide-in {
+    view-timeline-name: --element;
+    view-timeline-axis: block;
+
+    animation-timeline: --element;
+    animation-name: slide-in;
+
+    animation-range: entry 20% cover 40%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translatex(80px);
+    }
+    to {
+      opacity: 1;
+      transform: translatex(0);
+    }
+  }
+
+  .slide-out {
+    view-timeline-name: --element;
+    view-timeline-axis: block;
+
+    animation-timeline: --element;
+    animation-name: slide-out;
+
+    animation-range: entry 20% cover 40%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slide-out {
+    from {
+      opacity: 0;
+      transform: translateX(-80px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .floating {
+    animation: floating 3s infinite ease-in-out;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .rotate {
+    view-timeline-name: --element;
+    view-timeline-axis: block;
+
+    animation-timeline: --element;
+    animation-name: rotate;
+
+    animation-range: entry 30% cover 50%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: perspective(1000px) rotateX(50deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateX(0deg);
+    }
+  }
 </style>
+<script></script>

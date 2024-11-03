@@ -1,0 +1,87 @@
+---
+import ClipboardIcon from "@components/icons/ClipboardIcon.astro";
+import ClockIcon from "@components/icons/ClockIcon.astro";
+import MoneyIcon from "@components/icons/MoneyIcon.astro";
+import BannerSign from "@components/utils/BannerSign.astro";
+import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
+
+const programas = [
+  {
+    programa: "Técnico Laboral en Analista de Soporte de Software",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+  {
+    programa: "Técnico Laboral en Auxiliar Contable y Financiero",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    programa: "Técnico Laboral en Asistencia de Mercadeo y Ventas",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    programa: "Técnico Laboral en Auxiliar Administrativo",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+  {
+    programa: "Técnico Laboral en Auxiliar de Talento Humano",
+    resolucion: "RESOLUCIÓN NÚMERO 202450016540 DE 11/03/2024",
+  },
+  {
+    programa: "Técnico Laboral en Auxiliar de Diseño Gráfico",
+    resolucion: "RESOLUCIÓN NÚMERO 202350099330 DE 11/12/2023",
+  },
+];
+---
+
+<main class="flex flex-col gap-28">
+  <BannerSign
+    subtitle="Nuestra Metodologia de estudio"
+    title="Programas Técnico Laborales"
+    color="green"
+  />
+
+  <div
+    class="flex flex-row justify-between gap-5 text-white text-2xl text-center text-pretty font-bold show-in"
+  >
+    <span class="flex flex-col items-center gap-8">
+      <ClockIcon width="100px" height="100px" fillColor="none" />
+      <h3 class="italic">1 Año y Medio</h3>
+    </span>
+    <span class="flex flex-col items-center gap-8">
+      <MoneyIcon width="100px" height="100px" fillColor="none" />
+      <h3 class="italic">$999.900 COP / Semestre</h3>
+    </span>
+    <span class="flex flex-col items-center gap-8">
+      <ClipboardIcon width="100px" height="100px" fillColor="none" />
+      <h3 class="italic">Prácticas Garantizadas</h3>
+    </span>
+  </div>
+
+  <div class="grid grid-cols-[1fr_1px_1fr] items-center gap-10">
+    <img
+      class="w-full h-full object-cover aspect-[11/6] rounded-xl shadow-lg show-in"
+      src="https://www.elyonyireh.edu.co/wp-content/uploads/2024/04/SEMINARIO-3-Y-4-SEMESTRE_Mesa-de-trabajo-1.jpg"
+      alt=""
+    />
+    <HorizontalDivider color="green" />
+    <div class="flex flex-col gap-10 slide-in">
+      {
+        programas.map((programa) => (
+          <span class="flex flex-col text-pretty">
+            <h3 class="font-designer text-lg text-white">
+              {programa.programa}
+            </h3>
+            <h3 class="italic text-sm font-semibold text-[#1f4]">
+              {programa.resolucion}
+            </h3>
+          </span>
+        ))
+      }
+    </div>
+  </div>
+  <h3
+    class="text-center px-5 py-4 border-4 rounded-full font-designer text-xl show-in border-[#0c3]/80 shadow-[0px_1px_40px_#0c3] text-[#0d3] [text-shadow:0px_1px_30px_#0c3]"
+  >
+    AL CONCLUIR, OBTENDRÁS UN CERTIFICADO QUE TE PERMITIRÁ TRABAJAR
+  </h3>
+</main>
