@@ -43,6 +43,11 @@ const { title } = Astro.props;
       font-family: "Designer";
       src: url("fonts/Designer.otf") format("opentype");
     }
+
+    @font-face {
+      font-family: "Roboto";
+      src: url("fonts/Roboto-Regular.ttf") format("truetype");
+    }
   }
 
   .show-in {
@@ -52,14 +57,14 @@ const { title } = Astro.props;
     animation-timeline: --element;
     animation-name: show-in;
 
-    animation-range: entry 20% cover 40%;
+    animation-range: entry 30% cover 60%;
     animation-fill-mode: both;
   }
 
   @keyframes show-in {
     from {
       opacity: 0;
-      transform: translatey(80px);
+      transform: translatey(100px);
     }
     to {
       opacity: 1;
@@ -140,10 +145,56 @@ const { title } = Astro.props;
 
   @keyframes rotate {
     0% {
-      transform: perspective(1000px) rotateX(50deg);
+      transform: perspective(1000px) rotateX(70deg);
     }
     100% {
       transform: perspective(1000px) rotateX(0deg);
+    }
+  }
+
+  .phase {
+    view-timeline-name: --element;
+    view-timeline-axis: block;
+
+    animation-timeline: --element;
+    animation-name: phase;
+
+    animation-range: entry 10% cover 50%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes phase {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .phase-reverse {
+    view-timeline-name: --element;
+    view-timeline-axis: block;
+
+    animation-timeline: --element;
+    animation-name: phase-reverse;
+
+    animation-range: entry 10% cover 50%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes phase-reverse {
+    0% {
+      opacity: 0;
+      transform: translateX(200px);
+      transform:;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      transform:;
     }
   }
 </style>
