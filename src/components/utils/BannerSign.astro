@@ -1,0 +1,22 @@
+---
+const { subtitle, title, color } = Astro.props;
+---
+
+<div
+  class:list={[
+    "w-full flex flex-col items-center justify-center text-center px-5 py-4 border-4 rounded-tl-full rounded-tr-md rounded-br-full rounded-bl-md gap-7 slide-in",
+    {
+      "border-[#0c3]/80 text-[#0d3] [text-shadow:0px_1px_30px_#0c3] shadow-[0px_1px_45px_#0c3]":
+        color === "green",
+      "border-[#c00]/80 text-[#d00] [text-shadow:0px_1px_30px_#c00] shadow-[0px_1px_45px_#c00]":
+        color === "red",
+      "border-[#00c]/80 text-[#00d] [text-shadow:0px_1px_30px_#00c] shadow-[0px_1px_45px_#00c]":
+        color === "blue",
+      "border-[#cc0]/80 text-[#dd0] [text-shadow:0px_1px_30px_#cc0] shadow-[0px_1px_45px_#cc0]":
+        color === "yellow",
+    },
+  ]}
+>
+  <h4 class="text-xl font-bold">{subtitle}</h4>
+  <h1 class="font-designer text-white text-3xl">{title}</h1>
+</div>

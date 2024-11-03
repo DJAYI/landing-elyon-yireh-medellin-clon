@@ -1,0 +1,16 @@
+---
+const { color } = Astro.props;
+---
+
+<div
+  class:list={[
+    "[min-width:105%] bg-gradient-to-r h-1",
+    {
+      "from-[#fd4] to-[#bb6] shadow-[0px_0px_20px_#fd4]": color === "yellow",
+      "from-[#0c3] to-[#0d3] shadow-[0px_0px_20px_#0c3]": color === "green",
+      "from-[#c00] to-[#d00] shadow-[0px_0px_20px_#c00]": color === "red",
+      "from-[#00c] to-[#00d] shadow-[0px_0px_20px_#00c]": color === "blue",
+    },
+  ]}
+>
+</div>
