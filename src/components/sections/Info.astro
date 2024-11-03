@@ -16,10 +16,10 @@ const FloatingInfos = [
 ];
 ---
 
-<div class="my-40 flex flex-col gap-28 show-in">
+<div class="flex flex-col my-40 gap-28 show-in">
   <GradientDivider />
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-24">
+  <div class="grid grid-cols-1 gap-24 md:grid-cols-3">
     {
       FloatingInfos.map((info) => (
         <FloatingInfo title={info.title} subtitle={info.subtitle} />

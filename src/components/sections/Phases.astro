@@ -5,15 +5,17 @@ import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
 <div
   class="bg-gradient-to-b flex flex-col gap-24 mb-8 from-yellow-500/90 to-transparent py-6 rounded-t-[100px]"
 >
-  <h1 class="text-white text-center py-28 text-5xl font-designer">
+  <h1
+    class="text-5xl text-center [text-shadow:0px_0px_30px_#fff] text-white py-28 font-designer"
+  >
     ¿Cómo Iniciar con nosotros?
   </h1>
 </div>
 
-<main class="flex flex-col gap-y-8 items-center">
-  <div class="grid grid-cols-[1fr_1px_1fr] items-center h-screen">
+<main class="flex flex-col items-center gap-y-8">
+  <div class="grid grid-cols-[1fr_1px_1fr] items-center min-h-[120vh]">
     <div
-      class="flex gap-8 sticky top-0 justify-center items-baseline phase my-24 self-start"
+      class="sticky top-0 flex items-baseline self-start justify-center gap-8 py-32 phase"
     >
       <span
         class="text-[190px] font-roboto font-bold text-center text-yellow-500 drop-shadow-md [text-shadow:0_0_20px_#fc0]"
@@ -25,7 +27,7 @@ import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
       >
     </div>
     <HorizontalDivider color="yellow" />
-    <div class="flex flex-col px-8 font-semibold gap-y-16 text-center">
+    <div class="flex flex-col px-8 font-semibold text-center gap-y-16">
       <img class="rotate" src="images/Platforms.webp" alt="" />
       <p class="text-white">
         Selecciona tu carrera o curso corto de tu interés, y solicita a nuestros
@@ -33,7 +35,7 @@ import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
         detalles sobre:
       </p>
 
-      <div class="flex gap-10 flex-wrap items-center justify-center text-white">
+      <div class="flex flex-wrap items-center justify-center gap-10 text-white">
         <span
           class="border text-pretty font-semibold -skew-x-3 rounded-full px-6 py-2 [text-shadow:1px_0px_10px_#fd4] [box-shadow:1px_0px_10px_#fd4] border-yellow-500"
           >Duracion</span
@@ -57,8 +59,8 @@ import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
       </div>
     </div>
   </div>
-  <div class="grid grid-cols-[1fr_1px_1fr] items-center h-screen">
-    <div class="flex flex-col px-8 font-semibold gap-5 text-center">
+  <div class="grid grid-cols-[1fr_1px_1fr] items-center min-h-[120vh]">
+    <div class="flex flex-col gap-5 px-8 font-semibold text-center">
       <img class="rotate" src="images/Platforms.webp" alt="" />
       <p class="text-white">
         Selecciona tu carrera o curso corto de tu interés, y solicita a nuestros
@@ -70,7 +72,7 @@ import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
     <HorizontalDivider color="yellow" />
 
     <div
-      class="flex gap-8 sticky top-0 justify-center items-baseline phase-reverse my-24 self-start"
+      class="sticky top-0 flex items-baseline self-start justify-center gap-8 py-32 phase-reverse"
     >
       <span
         class="text-[190px] font-roboto font-bold text-center text-yellow-500 drop-shadow-md [text-shadow:0_0_20px_#fc0]"
@@ -82,9 +84,9 @@ import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
       >
     </div>
   </div>
-  <div class="grid grid-cols-[1fr_1px_1fr] items-center h-screen">
+  <div class="grid grid-cols-[1fr_1px_1fr] items-center min-h-[120vh]">
     <div
-      class="flex gap-8 sticky top-0 justify-center items-baseline phase my-24 self-start"
+      class="sticky top-0 flex items-baseline self-start justify-center gap-8 py-32 phase"
     >
       <span
         class="text-[190px] font-roboto font-bold text-center text-yellow-500 drop-shadow-md [text-shadow:0_0_20px_#fc0]"
@@ -96,7 +98,7 @@ import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
       >
     </div>
     <HorizontalDivider color="yellow" />
-    <div class="flex flex-col px-8 font-semibold gap-5 text-center">
+    <div class="flex flex-col gap-5 px-8 font-semibold text-center">
       <img class="rotate" src="images/Platforms.webp" alt="" />
       <p class="text-white">
         Selecciona tu carrera o curso corto de tu interés, y solicita a nuestros
