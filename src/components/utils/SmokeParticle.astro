@@ -39,7 +39,7 @@
       color: 0x000000,
     });
 
-    const number_of_particles = 45;
+    const number_of_particles = 55;
     for (let i = 0; i < number_of_particles; i++) {
       const particle = new THREE.Mesh(geometry, material);
       particle.position.x = Math.random() * 300 - 100;
@@ -54,7 +54,7 @@
   const animate = () => {
     requestAnimationFrame(animate);
     Particles.forEach((particle: any) => {
-      particle.rotation.z += 0.01;
+      particle.rotation.z += 0.008;
     });
 
     renderer.render(scene, camera);
