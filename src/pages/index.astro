@@ -13,6 +13,7 @@ import FAQ from "@sections/FAQ.astro";
 import Footer from "@sections/Footer.astro";
 import VerticalDivider from "@components/utils/VerticalDivider.astro";
 import GradientDivider from "@components/utils/GradientDivider.astro";
+import ButtonLinked from "@components/utils/ButtonLinked.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -33,7 +34,15 @@ import GradientDivider from "@components/utils/GradientDivider.astro";
       <HitCases />
       <GradientDivider color="green" />
     </div>
-    <Headquarters />
+    <div class="flex flex-col gap-8 items-center">
+      <Headquarters />
+      <ButtonLinked href="/" text="Comienza con Nosotros Hoy Mismo" />
+      <p class="w-1/2 text-center text-white text-pretty">
+        Si te registras recibe un 50% de descuento en tu programa técnico o
+        curso gracias a la Fundación Opción Mundial (puede ser un mensaje que
+        aparezca al llegar al formulario de registro).
+      </p>
+    </div>
     <FAQ />
     <Footer />
   </div>

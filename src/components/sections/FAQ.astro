@@ -1,0 +1,60 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const FrecuantQA: FAQItem[] = [
+  {
+    question: "¿Dónde tienen sedes?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime aspernatur perferendis ducimus numquam accusamus quidem, non mollitia, error ut dolorum, excepturi nobis quibusdam doloremque aperiam eius ratione porro cumque.",
+  },
+  {
+    question: "¿Cuánto hay que pagar para iniciar?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime aspernatur perferendis ducimus numquam accusamus quidem, non mollitia, error ut dolorum, excepturi nobis quibusdam doloremque aperiam eius ratione porro cumque.",
+  },
+  {
+    question: "¿Es válido su curso o programa técnico para trabajar?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime aspernatur perferendis ducimus numquam accusamus quidem, non mollitia, error ut dolorum, excepturi nobis quibusdam doloremque aperiam eius ratione porro cumque.",
+  },
+];
+---
+
+<main
+  class="w-full px-12 pt-10 pb-32 rounded-[38px] show-in mt-48 shadow-[0px_-5px_0px_1px_#ffcc00]"
+>
+  <header class="pb-24 pt-5">
+    <h5
+      class="text-4xl text-[#fc4] italic text-center [text-shadow:0_0_20px_#fc4] mt-4"
+    >
+      Sección de
+    </h5>
+    <h1
+      class="text-6xl text-center [text-shadow:0_0_20px_#0f4] mt-4 text-white font-designer"
+    >
+      Preguntas Frecuentes
+    </h1>
+  </header>
+
+  <section>
+    {
+      FrecuantQA.map(({ question, answer }, index: number) => (
+        <details
+          class="border-b border-[#fc0] py-2"
+          name="FAQ"
+          open={index === 0}
+        >
+          <summary class="text-4xl cursor-default hover:text-[#0f4] transition duration-150 ease-in-out list-image-none font-designer text-white py-6">
+            {question}
+          </summary>
+          <p class="text-lg text-white mt-4 ml-8 mr-4 text-pretty px-6 py-4">
+            {answer}
+          </p>
+        </details>
+      ))
+    }
+  </section>
+</main>
