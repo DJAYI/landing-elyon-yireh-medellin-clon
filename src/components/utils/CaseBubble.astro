@@ -1,0 +1,25 @@
+---
+import GradientDivider from "./GradientDivider.astro";
+import VerticalDivider from "./VerticalDivider.astro";
+
+const { title, description, imageUrl } = Astro.props;
+---
+
+<div
+  class="flex items-center w-full slide-out gap-3 justify-center rounded-tr-[2500px] rounded-bl-full px-8 py-4 fles-row shadow-[1px_4px_20px_#0f4] [background:linear-gradient(149deg,#00000000_10%,rgb(0,50,88)_60%)]"
+>
+  <img
+    class="object-cover w-40 object-right aspect-square scale-150 translate-y-10 -translate-x-10 [clip-path:circle(50%_at_50%_50%)]"
+    src={imageUrl}
+    alt=""
+  />
+  <div class="flex flex-col gap-5 px-4 py-2 text-white">
+    <h5
+      class="text-4xl [text-shadow:0px_0px_20px_#0f4] text-center font-designer"
+    >
+      {title}
+    </h5>
+    <GradientDivider color="green" />
+    <p class="text-center text-pretty">{description}</p>
+  </div>
+</div>
