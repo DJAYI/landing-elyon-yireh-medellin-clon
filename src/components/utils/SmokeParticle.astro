@@ -67,7 +67,10 @@
     renderer.setSize(w, h);
   };
 
-  document.addEventListener("resize", resize);
+  window.addEventListener("resize", () => {
+    resize();
+    console.log("resize");
+  });
 
   animate();
 </script>

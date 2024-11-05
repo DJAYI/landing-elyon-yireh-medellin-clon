@@ -65,7 +65,7 @@ const cursos = [
   />
 
   <div
-    class="flex flex-row justify-around gap-5 text-2xl font-bold text-center text-white text-pretty show-in"
+    class="flex flex-col md:flex-row justify-around gap-5 text-2xl font-bold text-center text-white text-pretty show-in"
   >
     <span class="flex flex-col items-center gap-8">
       <ClockIcon width="100px" height="100px" fillColor="none" />
@@ -77,8 +77,8 @@ const cursos = [
     </span>
   </div>
 
-  <div class="grid grid-cols-[1fr_1px_1fr] items-center gap-10">
-    <div class="grid grid-cols-2 gap-10 slide-out">
+  <div class="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] items-center gap-10">
+    <div class="grid grid-cols-1 px-4 sm:grid-cols-2 gap-10 slide-out">
       {
         cursos.map((curso) => (
           <span class="flex flex-col text-pretty">
@@ -94,13 +94,13 @@ const cursos = [
     <HorizontalDivider color="yellow" />
 
     <img
-      class="w-full h-full object-cover aspect-[11/6] rounded-xl shadow-lg show-in"
+      class="w-full h-full px-4 object-cover aspect-[11/6] rounded-xl shadow-lg show-in"
       src="https://www.elyonyireh.edu.co/wp-content/uploads/2024/02/IMG_95011.jpg"
       alt=""
     />
   </div>
   <h3
-    class="text-center px-5 py-4 border-4 rounded-full font-designer text-xl border-[#fc3]/80 shadow-[0px_1px_40px_#fc3] text-[#fc3] [text-shadow:0px_1px_30px_#fc3]"
+    class="text-center px-5 py-4 mx-4 border-4 rounded-full font-designer text-xl border-[#fc3]/80 shadow-[0px_1px_40px_#fc3] text-[#fc3] [text-shadow:0px_1px_30px_#fc3]"
   >
     Al Concluir, Obtendrás un Certificado que te Permitirá Trabajar
   </h3>

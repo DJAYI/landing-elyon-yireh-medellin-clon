@@ -5,32 +5,32 @@ import ButtonLinked from "@components/utils/ButtonLinked.astro";
 <header class="flex flex-col items-center w-full gap-5 my-4 mt-14">
   <img
     src="images/Logo.webp"
-    class="object-cover aspect-video w-[400px]"
+    class="object-cover aspect-video w-[300px] sm:w-[400px]"
     alt=""
   />
 
   <main class="flex flex-col items-center justify-center gap-8 mt-8">
     <h1
-      class="relative mb-4 text-5xl font-semibold tracking-wider text-center text-yellow-500 font-designer"
+      class="relative mb-4 text-3xl sm:text-5xl font-semibold tracking-wider text-center text-yellow-500 font-designer"
     >
       ¡Sé un experto!
     </h1>
     <h2
-      class="text-2xl font-designer uppercase text-pretty text-center text-white [text-shadow:2px_0px_50px_#0f4]"
+      class="text-xl sm:text-2xl font-designer uppercase text-pretty text-center text-white [text-shadow:2px_0px_50px_#0f4] px-4"
     >
       Prepárate con las habilidades del futuro y en las mejores condiciones de
       Colombia.
-
-      <!-- PREPÁRATE CON LAS HABILIDADES DEL FUTURO Y EN LAS MEJORES CONDICIONES DE
-      COLOMBIA. -->
     </h2>
 
     <section class="flex flex-col items-center w-full mt-10">
       <iframe
         title="vimeo-player"
         src="https://player.vimeo.com/video/235215203?h=f7635d145a"
-        class="w-11/12 shadow-md aspect-video rounded-xl shadow-black"></iframe>
-      <p class="w-9/12 mb-8 text-lg text-center text-white mt-9">
+        class="w-full sm:w-11/12 shadow-md aspect-video rounded-xl px-4 shadow-black"
+      ></iframe>
+      <p
+        class="w-11/12 sm:w-9/12 mb-8 text-base sm:text-lg text-center text-white mt-9"
+      >
         ¡Aprende habilidades de <b class="text-[#1f5]">alto valor</b> para comenzar
         tu vida profesional y comenzar a hacer tus sueños <b class="text-[#1f5]"
           >realidad</b
@@ -39,7 +39,7 @@ import ButtonLinked from "@components/utils/ButtonLinked.astro";
 
       <ButtonLinked href="/formulario" text="¡Quiero ser parte!" />
     </section>
-    <p class="text-sm text-white font-montserrat">
+    <p class="text-xs sm:text-sm text-white font-montserrat">
       Serás redirigido a nuestro formulario para completar el registro
     </p>
   </main>

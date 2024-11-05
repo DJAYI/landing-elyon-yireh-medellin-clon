@@ -33,7 +33,7 @@ const programas = [
 ];
 ---
 
-<main class="flex flex-col gap-28">
+<main class="flex flex-col gap-28 p-4 md:p-8">
   <BannerSign
     subtitle="Nuestra Metodologia de estudio"
     title="Programas Técnico Laborales"
@@ -41,7 +41,7 @@ const programas = [
   />
 
   <div
-    class="flex flex-row justify-between gap-10 text-2xl font-bold text-center text-white text-pretty show-in"
+    class="flex flex-col md:flex-row justify-between gap-10 text-2xl font-bold text-center text-white text-pretty show-in"
   >
     <span class="flex flex-col items-center gap-8">
       <ClockIcon width="100px" height="100px" fillColor="none" />
@@ -57,13 +57,13 @@ const programas = [
     </span>
   </div>
 
-  <div class="grid grid-cols-[1fr_1px_1fr] items-center gap-10">
+  <div class="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] items-center gap-10">
     <img
       class="w-full h-full object-cover aspect-[11/6] rounded-xl shadow-lg show-in"
       src="https://www.elyonyireh.edu.co/wp-content/uploads/2024/04/SEMINARIO-3-Y-4-SEMESTRE_Mesa-de-trabajo-1.jpg"
       alt=""
     />
-    <HorizontalDivider color="green" />
+    <HorizontalDivider color="green" class="hidden md:block" />
     <div class="flex flex-col gap-10 slide-in">
       {
         programas.map((programa) => (
@@ -80,7 +80,7 @@ const programas = [
     </div>
   </div>
   <h3
-    class="text-center px-5 py-4 border-4 rounded-full font-designer text-xl show-in border-[#0c3]/80 shadow-[0px_1px_40px_#0c3] text-[#0d3] [text-shadow:0px_1px_30px_#0c3]"
+    class="text-center px-5 py-4 border-4 rounded-full font-designer text-xl show-in border-[#0c3]/80 shadow-[0px_1px_40px_#0c3] text-[#0d3] [text-shadow:0px_1px_30px_#0c3] mx-4"
   >
     AL CONCLUIR, OBTENDRÁS UN CERTIFICADO QUE TE PERMITIRÁ TRABAJAR
   </h3>
