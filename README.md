@@ -1,54 +1,52 @@
-# Astro Starter Kit: Basics
+---
 
-```sh
-npm create astro@latest -- --template basics
+# Landing Elyon Yireh Medellín Clon
+
+Repositorio para el clon de la landing page de Elyon Yireh Medellín, desarrollada con HTML, CSS, JavaScript y Astro Framework.
+
+<br>
+
+## 🚀 Correr Proyecto
+```
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Estructura del Proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+La estructura de carpetas de este proyecto Astro es la siguiente:
 
 ```text
 /
+├── .vscode/
 ├── public/
+│   ├── fonts/
+│   ├── images/
+│   ├── particles/
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├── icons/
+│   │   ├── sections/
+│   │   └── utils/
 │   ├── layouts/
-│   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
-└── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **`src/pages/`**: Contiene las páginas `.astro` o `.md` que se exponen como rutas.
+- **`src/components/`**: Aquí se alojan los componentes de Astro divididos según su uso.
+- **`public/`**: Directorio para activos estáticos como imágenes o fuentes.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🧞 Comandos
 
-Any static assets, like images, can be placed in the `public/` directory.
+Ejecuta estos comandos desde la raíz del proyecto en la terminal:
 
-## 🧞 Commands
+| Comando                    | Acción                                           |
+| :------------------------- | :----------------------------------------------- |
+| `npm install`              | Instala las dependencias                         |
+| `npm run dev`              | Inicia el servidor local en `localhost:4321`     |
+| `npm run build`            | Construye el sitio de producción en `./dist/`    |
+| `npm run preview`          | Previsualiza la construcción localmente          |
+| `npm run astro ...`        | Ejecuta comandos CLI como `astro add`, `astro check` |
+| `npm run astro -- --help`  | Muestra ayuda para usar la CLI de Astro          |
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+> Este es solo un clon de la pagina original con el proposito de mejorar la UI/UX usando el original como referencia como ejercicio practico.
