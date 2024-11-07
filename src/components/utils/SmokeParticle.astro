@@ -1,4 +1,4 @@
-<div class="fixed top-0 min-w-full min-h-full" id="bkg"></div>
+<div class="fixed top-0 w-full h-full overflow-x-hidden" id="bkg"></div>
 
 <script>
   import * as THREE from "three";
@@ -61,16 +61,25 @@
   };
 
   const resize = () => {
+    requestAnimationFrame(resize);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
     renderer.setSize(w, h);
   };
 
-  window.addEventListener("resize", () => {
-    resize();
-    console.log("resize");
-  });
+  resize();
+  window.addEventListener("resize", resize);
 
   animate();
 </script>
+
+<style>
+  canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+  }
+</style>

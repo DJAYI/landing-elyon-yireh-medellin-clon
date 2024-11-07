@@ -65,7 +65,7 @@ const cursos = [
   />
 
   <div
-    class="flex flex-col md:flex-row justify-around gap-5 text-2xl font-bold text-center text-white text-pretty show-in"
+    class="flex flex-col justify-around gap-5 text-2xl font-bold text-center text-white md:flex-row text-pretty show-in"
   >
     <span class="flex flex-col items-center gap-8">
       <ClockIcon width="100px" height="100px" fillColor="none" />
@@ -77,8 +77,10 @@ const cursos = [
     </span>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] items-center gap-10">
-    <div class="grid grid-cols-1 px-4 sm:grid-cols-2 gap-10 slide-out">
+  <div
+    class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[1fr_1px_1fr] items-center gap-10"
+  >
+    <div class="grid grid-cols-1 gap-10 px-4 sm:grid-cols-2 slide-out">
       {
         cursos.map((curso) => (
           <span class="flex flex-col text-pretty">
@@ -95,8 +97,8 @@ const cursos = [
 
     <img
       class="w-full h-full px-4 object-cover aspect-[11/6] rounded-xl shadow-lg show-in"
-      src="https://www.elyonyireh.edu.co/wp-content/uploads/2024/02/IMG_95011.jpg"
-      alt=""
+      src="images/Cursos.jpg"
+      alt="Elyon Yireh Cursos Cortos"
     />
   </div>
   <h3

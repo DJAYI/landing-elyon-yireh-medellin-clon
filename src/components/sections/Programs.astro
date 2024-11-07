@@ -4,6 +4,7 @@ import ClockIcon from "@components/icons/ClockIcon.astro";
 import MoneyIcon from "@components/icons/MoneyIcon.astro";
 import BannerSign from "@components/utils/BannerSign.astro";
 import HorizontalDivider from "@components/utils/HorizontalDivider.astro";
+import VerticalDivider from "@components/utils/VerticalDivider.astro";
 
 const programas = [
   {
@@ -33,7 +34,7 @@ const programas = [
 ];
 ---
 
-<main class="flex flex-col gap-28 p-4 md:p-8">
+<main class="flex flex-col p-4 gap-28 md:p-8">
   <BannerSign
     subtitle="Nuestra Metodologia de estudio"
     title="Programas Técnico Laborales"
@@ -41,7 +42,7 @@ const programas = [
   />
 
   <div
-    class="flex flex-col md:flex-row justify-between gap-10 text-2xl font-bold text-center text-white text-pretty show-in"
+    class="flex flex-col justify-between gap-10 text-2xl font-bold text-center text-white md:flex-row text-pretty show-in"
   >
     <span class="flex flex-col items-center gap-8">
       <ClockIcon width="100px" height="100px" fillColor="none" />
@@ -57,14 +58,16 @@ const programas = [
     </span>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-[1fr_1px_1fr] items-center gap-10">
+  <div
+    class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-[1fr_1px_1fr] items-center gap-10"
+  >
     <img
       class="w-full h-full object-cover aspect-[11/6] rounded-xl shadow-lg show-in"
-      src="https://www.elyonyireh.edu.co/wp-content/uploads/2024/04/SEMINARIO-3-Y-4-SEMESTRE_Mesa-de-trabajo-1.jpg"
-      alt=""
+      src="images/Programas.jpg"
+      alt="Elyon Yireh Programas Técnico Laborales"
     />
-    <HorizontalDivider color="green" class="hidden md:block" />
-    <div class="flex flex-col gap-10 slide-in">
+    <HorizontalDivider color="green" />
+    <div class="flex flex-col gap-10 px-4 slide-in">
       {
         programas.map((programa) => (
           <span class="flex flex-col text-pretty">

@@ -1,27 +1,25 @@
 ---
 import GradientDivider from "./GradientDivider.astro";
 import MapSVG from "./MapSVG.astro";
-import VerticalDivider from "./VerticalDivider.astro";
 
 const bubles_stats = [
   {
     id: "bol-bubble",
-    imgSrc:
-      "https://lh3.googleusercontent.com/p/AF1QipM9Zi8pGneU-Tx3LSNT-BuiHC5HJPjFA8Sdr6zV=s680-w680-h510",
+    imgSrc: "images/SedeCartagena.png",
     title: "Cartagena",
-    top: "top-[20rem]",
-    left: "-left-44",
+    top: "xl:top-[20rem]",
+    left: "xl:-left-44",
     dividers: [
       {
-        top: "top-[3px]",
+        top: "sm:hidden md:hidden xl:top-[3px]",
         left: "",
-        right: "-right-28",
+        right: "xl:-right-28",
         rotate: "-rotate-90",
         height: "min-h-[164px]",
       },
       {
-        top: "-top-[95px]",
-        right: "-right-[15rem]",
+        top: "xl:-top-[95px]",
+        right: "xl:-right-[15rem]",
         rotate: "-rotate-[-25deg]",
         height: "min-h-[190px]",
       },
@@ -29,22 +27,21 @@ const bubles_stats = [
   },
   {
     id: "ant-bubble",
-    imgSrc:
-      "https://scontent.fctg3-1.fna.fbcdn.net/v/t39.30808-6/316316246_10159261580568811_1648662685467780524_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHt6Mlsb6YSErusoE6LEF0R2vQu4M0JwfHa9C7gzQnB8ZR-PpriFfOB5M45Bx39yXemjsTMjc0Dk-LbFTyidL6w&_nc_ohc=dLPJBMVnv6MQ7kNvgFkfDFb&_nc_zt=23&_nc_ht=scontent.fctg3-1.fna&_nc_gid=AMDytaRYn_Gb2tdPd6TKPyo&oh=00_AYAHYwMehfPT2AlmGry5ej7803FyShWrip8bsFXFLFWupA&oe=672ED4B4",
+    imgSrc: "images/SedeMedellin.jpg",
     title: "Medellin",
-    top: "top-0",
-    left: "-left-32",
+    top: "xl:top-0",
+    left: "xl:-left-32",
     dividers: [
       {
-        top: "top-[35px]",
-        right: "-right-32",
+        top: "sm:hidden md:hidden xl:top-[35px]",
+        right: "xl:-right-32",
         left: "",
         rotate: "-rotate-90",
         height: "min-h-[130px]",
       },
       {
-        top: "top-[96.5px]",
-        right: "-right-[13rem]",
+        top: "xl:top-[96.5px]",
+        right: "xl:-right-[13rem]",
         left: "",
         rotate: "-rotate-[7deg]",
         height: "min-h-[300px]",
@@ -53,23 +50,22 @@ const bubles_stats = [
   },
   {
     id: "atl-bubble",
-    imgSrc:
-      "https://static.wixstatic.com/media/e37986_a5dac02be1224f7e98fa3673fa5a104d~mv2.jpg/v1/crop/x_0,y_43,w_800,h_565/fill/w_560,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/elyon-patio.jpg",
+    imgSrc: "images/SedeBarranquilla.webp",
     title: "Barranquilla",
-    top: "top-0",
-    left: "-right-10",
+    top: "xl:top-0",
+    left: "xl:-right-10",
     dividers: [
       {
-        top: "-top-[28px]",
+        top: "sm:hidden md:hidden xl:-top-[28px]",
         right: "",
-        left: "-left-40",
+        left: "xl:-left-40",
         rotate: "-rotate-90",
         height: "min-h-[288px]",
       },
       {
-        top: "top-[80.5px]",
+        top: "xl:top-[80.5px]",
         right: "",
-        left: "-left-[22.5rem]",
+        left: "xl:-left-[22.5rem]",
         rotate: "-rotate-[-60deg]",
         height: "min-h-[138px]",
       },
@@ -78,27 +74,31 @@ const bubles_stats = [
 ];
 ---
 
-<div class="relative rotate">
-  <div class="lg:floating sm:flex sm:flex-col mx-4">
+<div class="w-full mt-8">
+  <div class="relative grid items-center mx-4 floating xl:relative">
     <MapSVG />
 
     {
       bubles_stats.map(({ id, imgSrc, title, top, left, dividers }) => (
         <div
-          class={`lg:absolute sm:relative sm:visible sm:opacity-100 lg:invisible lg:opacity-0 [transition:visibility_0.15s_ease-out,opacity_0.2s_ease-in-out] lg:w-[350px] ${top} ${left} lg:h-[200px]`}
+          class={`
+            xl:absolute relative opacity-100 visible xl:invisible xl:opacity-0  [transition:visibility_0.15s_ease-out,opacity_0.2s_ease-in-out] grid grid-cols-1 lg:w-[350px] lg:h-[200px]  ${top} ${left}`}
           id={id}
         >
           <img
-            class="w-full px-4 aspect-video object-cover"
+            class="xl:absolute z-20 mx-auto sm:max-w-[400px] md:max-w-[600px] lg:max-w-[450px] px-4 aspect-video object-cover"
             src={imgSrc}
-            alt=""
+            alt="Elyon Yireh"
           />
-          <div class="lg:absolute sm:relative top-56 w-full">
-            <h3 class="py-4 text-4xl mb-2 text-center font-designer text-[#0f4] [text-shadow:1px_1px_20px_#af4]">
+          <div class="relative w-full px-4 xl:absolute xl:top-64">
+            <h3
+              aria-label={`Sede ${title}`}
+              class="py-4 text-4xl mb-2 text-center font-designer text-[#0f4] [text-shadow:1px_1px_20px_#af4]"
+            >
               {title}
             </h3>
             <GradientDivider color="green" />
-            <p class="lg:absolute text-center mt-2 text-lg [text-shadow:0px_0px_10px_#fff] my-28 text-white">
+            <p class="xl:absolute relative px-4 text-center mt-2 text-lg [text-shadow:0px_0px_10px_#fff] my-28 text-white">
               Horarios de Atención: Lunes a Sabado 8:00 A.M. - 6:00 P.M.
               <br />
               <br />
@@ -110,8 +110,8 @@ const bubles_stats = [
             </p>
           </div>
           {dividers.map(({ top, right, left, rotate, height }) => (
-            <div
-              class={`w-1 ${height} border-2 border-dashed lg:block sm:hidden absolute ${top} ${right || left} ${rotate}`}
+            <span
+              class={`w-1 ${height} border-2 border-white/0 z-20 border-dashed hidden xl:border-white xl:block absolute ${top} ${right || left} ${rotate}`}
             />
           ))}
         </div>
