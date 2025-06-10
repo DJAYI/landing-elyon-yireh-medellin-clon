@@ -229,7 +229,7 @@ const { title } = Astro.props;
     }
   }
 </style>
-<script>
+<script is:inline>
   window.onloadTurnstileCallback = function () {
   turnstile.render(".cf-turnstile", {
     sitekey: "0x4AAAAAABgqZqc2koHzwA2x",
